@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== Reset & Font ==================== */
+        * {margin:0;padding:0;box-sizing:border-box;font-family: 'Montserrat', sans-serif;}
+        body {background-color:#111; color:#fff; line-height:1.6;}
+        a {text-decoration:none; color:inherit;}
+
+        /* ==================== Navbar ==================== */
+        nav {
+            position: fixed;
+            top:0; left:0; width:100%;
+            background: #1a1a1a;
+            padding: 1rem 2rem;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.5);
+        }
+        nav .logo {font-size:1.5rem; font-weight:700; color: #ff6700;}
+        nav ul {display:flex; list-style:none; gap:2rem;}
+        nav ul li {transition:0.3s;}
+        nav ul li:hover {color:#ff6700;}
+
+        /* ==================== Hero ==================== */
+        .hero {
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background: linear-gradient(135deg,#ff6700,#ff9c00);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .hero h1 {font-size:3rem; color:#111; margin-bottom:1rem;}
+        .hero p {font-size:1.2rem; color:#222; max-width:600px;}
+        .hero button {
+            margin-top:2rem;
+            padding:1rem 2rem;
+            border:none;
+            background:#111;
+            color:#ff6700;
+            font-weight:700;
+            font-size:1rem;
+            border-radius:50px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .hero button:hover {background:#222; transform:scale(1.05);}
+
+        /* ==================== Sections ==================== */
+        section {
+            padding:4rem 2rem;
+            max-width:1200px;
+            margin:0 auto;
+        }
+        section h2 {
+            text-align:center;
+            font-size:2.5rem;
+            margin-bottom:2rem;
+            color:#ff6700;
+        }
+
+        /* Features */
+        .features {
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:2rem;
+        }
+        .feature-card {
+            background:#1a1a1a;
+            padding:2rem;
+            border-radius:10px;
+            transition:0.3s;
+        }
+        .feature-card:hover {
+            transform:translateY(-10px);
+            box-shadow:0 10px 20px rgba(255,103,0,0.3);
+        }
+        .feature-card h3 {color:#ff6700; margin-bottom:1rem;}
+        .feature-card p {color:#ccc;}
+
+        /* FAQ */
+        .faq-item {margin-bottom:1.5rem;}
+        .faq-item h4 {
+            cursor:pointer;
+            padding:1rem;
+            background:#222;
+            border-radius:5px;
+            transition:0.3s;
+        }
+        .faq-item h4:hover {background:#333;}
+        .faq-item p {
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.3s ease;
+            padding:0 1rem;
+            color:#ccc;
+        }
+        .faq-item.active p {max-height:200px; padding:1rem;}
+
+        /* Footer */
+        footer {
+            text-align:center;
+            padding:2rem;
+            background:#111;
+            color:#777;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            nav ul {flex-direction:column; gap:1rem;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Zenith</div>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Zenith Bot</h1>
+        <p>O suporte definitivo para a sua comunidade. Inteligente, rápido e confiável, feito para facilitar sua vida.</p>
+        <button>Comece agora</button>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre o Zenith</h2>
+        <p>Zenith é um bot avançado projetado para oferecer suporte, automação e interações inteligentes dentro de servidores e comunidades online. Ele combina eficiência, confiabilidade e tecnologia moderna em um único pacote.</p>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades">
+        <h2>Funcionalidades</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Automação</h3>
+                <p>Responda automaticamente a comandos e mensagens frequentes, economizando tempo e esforço.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Moderação</h3>
+                <p>Mantenha sua comunidade segura com filtros inteligentes e ferramentas de moderação avançadas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Integrações</h3>
+                <p>Conecte o Zenith com plataformas externas e melhore sua produtividade com integrações simples.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Analytics</h3>
+                <p>Acompanhe estatísticas e métricas detalhadas sobre o desempenho do bot e da sua comunidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h4>Como adiciono o Zenith ao meu servidor?</h4>
+            <p>Basta clicar no link de convite e seguir as instruções para adicionar o bot ao seu servidor em poucos segundos.</p>
+        </div>
+        <div class="faq-item">
+            <h4>O Zenith é gratuito?</h4>
+            <p>Sim! O Zenith oferece uma versão gratuita com funcionalidades essenciais, além de planos premium para recursos avançados.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Preciso de conhecimento técnico para usar?</h4>
+            <p>Não! O Zenith foi projetado para ser fácil de usar, mesmo para iniciantes. Comandos simples e documentação completa ajudam você a começar.</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato com nossa equipe de suporte: <a href="mailto:support@zenithbot.com" style="color:#ff6700;">support@zenithbot.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Zenith Bot. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // FAQ toggle
+        const faqItems = document.querySelectorAll('.faq-item h4');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
